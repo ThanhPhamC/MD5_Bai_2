@@ -52,7 +52,11 @@ export default class App extends Component {
     })
   }
   handleUpdate=(toggle,studentUpdate)=>{
-   
+    if(studentUpdate.sex=="true"){
+    studentUpdate.sex= true;
+   }else{
+    studentUpdate.sex= false;
+   }
     let listStudent=this.state.listStudent.map((student)=>{
       if(student.studentId==studentUpdate.studentId){
         return studentUpdate;
